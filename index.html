@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#f5f1e8">
+<title>PikoBuy spreadsheet – svensk guide till produktlänkar och QC</title>
+<meta name="description" content="Använd PikoBuy spreadsheet för att hitta produktkategorier och jämföra storlek, QC-foton och fraktunderlag inför ett köp från Sverige.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:title" content="PikoBuy spreadsheet – produktlänkar och QC">
+<meta property="og:description" content="En svensk guide till produktkategorier, storleksjämförelser och kvalitetskontroll.">
+<link rel="preconnect" href="https://static.nike.com">
+<style>
+:root{color-scheme:light;--paper:#f5f1e8;--ink:#202b35;--muted:#4e5c67;--accent:#70373e;--line:#cdc5b9;--white:#fffcf5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.65 system-ui,sans-serif}
+.wrap{width:min(1120px,calc(100% - 2rem));margin-inline:auto}
+a{color:var(--accent);text-underline-offset:.22em}
+a:focus-visible,summary:focus-visible{outline:3px solid #804551;outline-offset:4px}
+header{border-bottom:1px solid var(--line);padding:.8rem 0}
+header a{font-weight:800;text-decoration:none}
+h1,h2,h3,p,figure{margin:0}
+h1,h2{font-family:Georgia,serif;line-height:1.03;letter-spacing:-.035em}
+h1{font-size:clamp(2.75rem,7vw,6.25rem)}
+h2{font-size:clamp(1.85rem,4vw,3.1rem)}
+h3{line-height:1.25}
+p{margin-top:.75rem}
+nav,section,footer{margin-top:clamp(1.8rem,5vw,4.2rem)}
+nav{margin-top:1.1rem}
+nav h2{font:700 1rem/1.4 system-ui,sans-serif;letter-spacing:0}
+ul,ol{padding-inline-start:1.35rem}
+.categories{list-style:none;padding:0;margin:.55rem 0 0;display:flex;flex-wrap:wrap;gap:.45rem}
+.categories a{display:inline-block;padding:.38rem .65rem;background:var(--white);border:1px solid var(--line);border-radius:.35rem;text-decoration:none}
+.categories a:hover{background:#eee1db}
+.hero{display:grid;grid-template-columns:1fr .68fr;align-items:center;gap:clamp(1rem,4vw,3rem)}
+.hero p{max-width:49ch}
+figure{overflow:hidden;border-radius:.65rem;background:var(--white);border:1px solid var(--line)}
+figure img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#faf8f4}
+.hero img{aspect-ratio:4/3;object-fit:cover}
+figcaption{padding:.55rem .75rem;color:var(--muted);font-size:.9rem}
+.button{display:inline-block;margin-top:1rem;padding:.65rem 1rem;background:var(--accent);color:#fff;border-radius:.35rem;text-decoration:none;font-weight:700}
+.grid,.gallery{display:grid;gap:.8rem;margin-top:1rem}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+article{padding:1.15rem;background:var(--white);border-top:3px solid var(--accent);border-radius:.3rem}
+details{border-bottom:1px solid var(--line);padding:.8rem 0}
+summary{cursor:pointer;font-weight:700}
+footer{padding:1rem 0 2rem;border-top:1px solid var(--line);color:var(--muted)}
+@media(max-width:680px){.hero,.grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebPage","name":"PikoBuy spreadsheet – svensk guide till produktlänkar och QC","inLanguage":"sv","description":"Använd PikoBuy spreadsheet för att hitta produktkategorier och jämföra storlek, QC-foton och fraktunderlag inför ett köp från Sverige."},
+    {"@type":"FAQPage","inLanguage":"sv","mainEntity":[
+      {"@type":"Question","name":"Vad är ett PikoBuy spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Det är en produktlista som brukar samla länkar och anteckningar per kategori. Använd listan som utgångspunkt och kontrollera alltid den aktuella säljarannonsen."}},
+      {"@type":"Question","name":"Vad visar QC-foton?","acceptedAnswer":{"@type":"Answer","text":"QC-foton visar synliga detaljer på den fotograferade varan, till exempel sömmar, märkning och mått. Bilderna räcker inte för att fastställa äkthet."}},
+      {"@type":"Question","name":"Vart leder kategorilänkarna?","acceptedAnswer":{"@type":"Answer","text":"De öppnar respektive produktkategori hos HipobuyFind. Produktval och tillgängliga varianter framgår på målsidan."}},
+      {"@type":"Question","name":"Hur jämför jag frakt till Sverige?","acceptedAnswer":{"@type":"Answer","text":"Jämför transportalternativen för ditt postnummer. Be om paketets vikt och mått och kontrollera vilka avgifter som ingår i det visade totalbeloppet."}}
+    ]}
+  ]
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/gfagc/">
+</head>
+<body>
+<header><div class="wrap"><a href="https://www.hipobuyfind.com">www.hipobuyfind.com</a></div></header>
+<main class="wrap">
+<nav aria-labelledby="categories">
+<h2 id="categories">Produktkategorier</h2>
+<ul class="categories">
+<li><a href="https://hipobuyfind.com/category-911-Shoes.html">Skor</a></li>
+<li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Huvtröjor och tröjor</a></li>
+<li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts</a></li>
+<li><a href="https://hipobuyfind.com/category-914-Jackets.html">Jackor</a></li>
+<li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Byxor och shorts</a></li>
+<li><a href="https://hipobuyfind.com/category-916-Headwear.html">Huvudbonader</a></li>
+<li><a href="https://hipobuyfind.com/category-917-Sets.html">Matchande set</a></li>
+<li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Underkläder</a></li>
+<li><a href="https://hipobuyfind.com/category-919-Jersey.html">Matchtröjor</a></li>
+<li><a href="https://hipobuyfind.com/category-920-Accessories.html">Accessoarer</a></li>
+</ul>
+</nav>
+<section class="hero" aria-labelledby="start">
+<div>
+<h1 id="start">PikoBuy spreadsheet</h1>
+<p>Hitta rätt kategori och jämför sedan rätt variant. Den här guiden visar hur du kontrollerar produktlänkar, läser en storlekstabell och bedömer kvalitetsbilder innan du bestämmer dig.</p>
+<a class="button" href="https://www.hipobuyfind.com">Utforska HipobuyFind</a>
+</div>
+<figure>
+<img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,w_640/f888b4a3-a02a-420d-93e3-cb33c3bb30ac/AIR%2BFORCE%2B1%2B%2707.png" width="640" height="480" alt="Vit Nike Air Force 1 ’07 Texture med perforerad tåbox" fetchpriority="high">
+<figcaption>Bildexempel · Nike Air Force 1 ’07 Texture</figcaption>
+</figure>
+</section>
+<section aria-labelledby="guide">
+<h2 id="guide">Från produktlänk till köpbeslut</h2>
+<div class="grid">
+<article>
+<h3>PikoBuy produktlänkar</h3>
+<p>Öppna säljarannonsen och jämför artikelnummer, modellnamn och variantkod med raden i listan. Om länken går till en annan modell eller en utgången annons, sök på artikelnumret och kontrollera att rätt färg och storlek går att välja.</p>
+</article>
+<article>
+<h3>PikoBuy storleksguide</h3>
+<p>För sneakers kan du mäta innersulan i en sko som redan passar och jämföra måttet med säljarens tabell. För huvtröjor och jackor, mät bröstvidd, plagglängd och ärmlängd på ett liknande plagg när det ligger plant. Kontrollera om tabellen anger bredd eller omkrets.</p>
+</article>
+<article>
+<h3>PikoBuy QC-foton</h3>
+<p>Be om bilder av den valda färgvarianten. På skor är sulmönster, häl och storleksetikett bra jämförelsepunkter. För kläder kan närbilder visa tygstruktur och sömmar. På en väska kan du be om bilder av dragkedja, beslag och foder.</p>
+</article>
+<article>
+<h3>PikoBuy frakt till Sverige</h3>
+<p>Anteckna varans pris, paketvikt och kartongmått. Fråga om frakten beräknas på faktisk vikt eller volymvikt och jämför slutbeloppet i kronor. Kontrollera vad fraktalternativet inkluderar och läs returvillkoren för just din beställning.</p>
+</article>
+</div>
+</section>
+<section aria-labelledby="examples">
+<h2 id="examples">Detaljer att jämföra</h2>
+<p>Varumärkesbilderna är illustrationer. Guiden har ingen officiell koppling till PikoBuy eller de avbildade varumärkena.</p>
+<div class="gallery">
+<figure>
+<img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" alt="Beige Gucci-keps med GG-mönster" loading="lazy" decoding="async">
+<figcaption>Gucci · jämför skärm och mönster</figcaption>
+</figure>
+<figure>
+<img src="https://assets.christiandior.com/is/image/diorprod/113J699A0531C989_E01-1?%24default_GHC%24=&amp;crop=417%2C146%2C1178%2C1539&amp;wid=420" width="420" height="420" alt="Svart Dior CD Icon-sweatshirt i bomull" loading="lazy" decoding="async">
+<figcaption>Dior · jämför halsringning och passform</figcaption>
+</figure>
+<figure>
+<img src="https://tw.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-neverfull-mm--M46975_PM1_Side%20view.jpg?wid=420" width="420" height="420" alt="Louis Vuitton Neverfull MM i brunt monogrammönster, sedd från sidan" loading="lazy" decoding="async">
+<figcaption>Louis Vuitton · jämför handtag och väskans mått</figcaption>
+</figure>
+<figure>
+<img src="https://assets.hermes.com/is/image/hermesproduct/bracelet-clic-h--700001F%204P-front-1-300-0-1000-1000_b.jpg?wid=420" width="420" height="420" alt="Hermès Clic H-armband med emalj och H-format spänne" loading="lazy" decoding="async">
+<figcaption>Hermès · jämför lås och armbandets omkrets</figcaption>
+</figure>
+</div>
+</section>
+<section aria-labelledby="faq">
+<h2 id="faq">Vanliga frågor</h2>
+<details open>
+<summary>Vad är ett PikoBuy spreadsheet?</summary>
+<p>Det är en produktlista som brukar samla länkar och anteckningar per kategori. Använd listan som utgångspunkt och kontrollera alltid den aktuella säljarannonsen.</p>
+</details>
+<details>
+<summary>Vad visar QC-foton?</summary>
+<p>QC-foton visar synliga detaljer på den fotograferade varan, till exempel sömmar, märkning och mått. Bilderna räcker inte för att fastställa äkthet.</p>
+</details>
+<details>
+<summary>Vart leder kategorilänkarna?</summary>
+<p>De öppnar respektive produktkategori hos HipobuyFind. Produktval och tillgängliga varianter framgår på målsidan.</p>
+</details>
+<details>
+<summary>Hur jämför jag frakt till Sverige?</summary>
+<p>Jämför transportalternativen för ditt postnummer. Be om paketets vikt och mått och kontrollera vilka avgifter som ingår i det visade totalbeloppet.</p>
+</details>
+</section>
+</main>
+<footer class="wrap"><a href="https://www.hipobuyfind.com">Till HipobuyFind</a></footer>
+</body>
+</html>
